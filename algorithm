@@ -1,7 +1,6 @@
-# Crypto Trading Algorithm (showcase Version)
-# 
-# This code is part of a personal project developed to analyze cryptocurrency market trends 
-# and generate actionable trading insights. Portions of the algorithm are withheld to 
+
+# This code is part of a project developed to analyze data 
+# and generate actionable insights. Portions of the algorithm are withheld to 
 # protect proprietary methods and intellectual property.
 # 
 # Publicly shared components:
@@ -16,7 +15,6 @@
 # - Email: contact@oscargracia.site
 # - Website: oscargracia.site
 #
-#Proprietary License - Crypto Trading Algorithm (Showcase Version)
 #
 #This code is made available for educational and informational purposes only. You are not authorized 
 #to use, reproduce, distribute, or modify this code for commercial or competitive purposes. Any 
@@ -27,38 +25,6 @@
 #
 
 
-### Summary Explanation for the Code:
-"""
-This Python script is a comprehensive data-fetching and processing tool for cryptocurrency trading data using the Binance API. Key features and functionalities include:
-
-1. **Binance Initialization**:
-   - The script connects to Binance's USD-M Futures market using the `ccxt` library.
-
-2. **Time Management Functions**:
-   - `initial_start_end_times`: Calculates start and end timestamps for data fetching, allowing configurable time intervals.
-   - Utility functions like `convert_to_iso8601_utc` and `convert_iso8601_and_subtract_hours` handle time conversions and manipulations.
-
-3. **OHLCV Data Fetching**:
-   - `fetch_data`: Downloads Open-High-Low-Close-Volume (OHLCV) data for a specific cryptocurrency symbol and interval.
-   - Ensures data completeness and handles pagination for large datasets.
-
-4. **Interval Counting**:
-   - Adds time interval markers (e.g., 4-hour, 30-minute, 5-minute intervals) to datasets for segmentation and analysis.
-
-5. **DataFrame Processing**:
-   - Functions like `process_dataframe` and `process_dataframe_2` clean and reformat data columns for analysis.
-   - Supports custom column renaming, dropping, and ID remapping.
-
-6. **Multi-Interval Fetching**:
-   - Separate methods to fetch and process 4-hour, 30-minute, and 5-minute interval datasets.
-   - Includes utilities to remove duplicate or irregular data segments.
-
-7. **Miscellaneous Utilities**:
-   - Functions for formatting datetime ranges and extracting segments.
-   - Methods to handle duplicates and compute segment differences.
-
-This script is a powerful starting point for advanced cryptocurrency data analysis and visualization. It supports integration with Telegram for notification and real-time monitoring of fetched intervals.
-"""
 
 import warnings
 import ccxt
